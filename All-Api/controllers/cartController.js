@@ -72,10 +72,6 @@ const viewcart = async (req, res) => {
 const deletecart = async (req, res) => {
     try {
         let id = req.query.id;
-        
-        
-        // let old = await addcartmodel.findById(id);
-        // await cloudinary.uploader.destroy(old.public_id);
 
         await addcartmodel.findByIdAndDelete(id);
 
